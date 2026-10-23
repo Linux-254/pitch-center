@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="page-title">Business Growth Engine | High-Converting Websites &amp; 24/7 AI Chatbot</title>
+  <meta name="description" id="page-meta-desc" content="Premium marketing websites with instant 24/7 AI Chatbot concierge for salons, clinics, real estate, gyms, driving schools, and car dealerships across Kenya." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Rotating Announcement Ticker -->
+  <div class="announcement-bar" id="announcement-bar">
+    <div class="announcement-bar__track" id="announcement-track">
+      <span class="announcement-bar__item active" id="ticker-0">Same-day setup available -- Get your site live in 24 hours</span>
+      <span class="announcement-bar__item" id="ticker-1">64% of Kenyan customers book from whoever replies first</span>
+      <span class="announcement-bar__item" id="ticker-2">Switch industry demos below to see your business type</span>
+    </div>
+  </div>
+
+  <!-- Industry Vertical Switcher -->
+  <nav class="vertical-rail" id="vertical-rail" aria-label="Select Business Type">
+    <button class="vert-pill active" data-vertical="restaurant" id="pill-restaurant">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8zM6 1v3M10 1v3M14 1v3"/></svg>
+      Restaurants &amp; Lounges (QR Menu)
+    </button>
+    <button class="vert-pill" data-vertical="salon" id="pill-salon">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3v12M18 3v12M6 7.5c6 0 6 4.5 12 4.5M6 15a6 6 0 0 0 6 6 6 6 0 0 0 6-6"/></svg>
+      Salons &amp; Spas
+    </button>
+    <button class="vert-pill" data-vertical="clinic" id="pill-clinic">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg>
+      Clinics &amp; Dentists
+    </button>
+    <button class="vert-pill" data-vertical="realestate" id="pill-realestate">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      Real Estate
+    </button>
+    <button class="vert-pill" data-vertical="gym" id="pill-gym">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M6.5 6.5h11M6 12h12M6.5 17.5h11M4 6.5V8M4 16v1.5M20 6.5V8M20 16v1.5M2 9v6M22 9v6"/></svg>
+      Gyms &amp; Fitness
+    </button>
+    <button class="vert-pill" data-vertical="school" id="pill-school">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+      Schools &amp; Driving
+    </button>
+    <button class="vert-pill" data-vertical="cardealer" id="pill-cardealer">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h-2l-2 7h10l-2-7h-2M5.4 11l-3 5.2A2 2 0 0 0 4.1 20h15.8a2 2 0 0 0 1.7-3.8L18.6 11H5.4z"/><circle cx="7.5" cy="17" r="1"/><circle cx="16.5" cy="17" r="1"/></svg>
+      Car Dealers
+    </button>
+  </nav>
+
+  <!-- Primary Navigation Header -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <div class="brand-group">
+        <div class="brand-mark" id="brand-mark">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <div class="brand-text">
+          <h1 class="brand-name" id="brand-name">Kikao Flame Grill &amp; Lounge</h1>
+          <span class="brand-tagline" id="brand-tagline">Smoked Ribs, Flame Steaks &amp; Instant QR Table Ordering</span>
+        </div>
+      </div>
+      <div class="header-nav-shortcuts">
+        <a href="#dual-showcase-section" class="nav-shortcut">Dual-View (Desktop + Mobile)</a>
+        <a href="#admin-dashboard-section" class="nav-shortcut">Live Admin POS</a>
+        <a href="#direct-pitch-section" class="nav-shortcut highlight">CyTech Pitch Engine</a>
+      </div>
+      <div class="header-actions">
+        <button class="branch-pill" id="branch-pill">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span id="branch-pill-name">Westlands Flagship</span>
+        </button>
+        <button class="btn-primary" id="header-cta-btn">
+          <span id="header-cta-label">Scan Digital Menu</span>
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section with Video/Image Background -->
+  <section class="hero" id="hero-section">
+    <div class="hero__media">
+      <video class="hero__video" id="hero-video" autoplay muted loop playsinline preload="metadata">
+        <source src="" type="video/mp4" />
+      </video>
+      <img class="hero__image" id="hero-image" src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1600&auto=format&fit=crop&q=80" alt="Business Hero" />
+    </div>
+    <div class="hero__gradient"></div>
+    <div class="hero__content">
+      <div class="hero__badge" id="hero-badge">
+        <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10"/></svg>
+        <span id="hero-badge-text">20% OFF FIRST VISIT -- BOOK IN 30 SECONDS</span>
+      </div>
+      <h2 class="hero__headline" id="hero-headline">Look Stunning. <span>Feel Confident.</span> Zero Waiting Time.</h2>
+      <p class="hero__subhead" id="hero-subhead">From knotless boho braids to deluxe hydrafacials and executive gentleman grooming. Book top stylists instantly without waiting 3 hours for a DM reply.</p>
+
+      <div class="hero__actions">
+        <button class="btn-hero-primary" id="hero-cta-btn">
+          <span id="hero-cta-label">Book Stylist Online</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+        <button class="btn-hero-secondary" id="hero-chat-btn">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <span>Ask AI Concierge (Replies in 2s)</span>
+        </button>
+      </div>
+
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <strong id="stat-clients">12,500+ Clients Styled</strong>
+          <span>Verified Clients</span>
+        </div>
+        <div class="hero__stat">
+          <strong id="stat-rating">4.9 / 5 (1,150 Reviews)</strong>
+          <span>Google Reviews</span>
+        </div>
+        <div class="hero__stat">
+          <strong id="stat-speed">&lt; 2s AI Reply Time</strong>
+          <span>Instant Response</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Weekly Timed Deal Banner -->
+  <section class="deal-banner" id="deal-section">
+    <div class="deal-card">
+      <div class="deal-info">
+        <span class="deal-tag" id="deal-tag">TUESDAY SPECIAL</span>
+        <h3 class="deal-title" id="deal-title">Mani-Pedi + Free Blowdry Tuesday</h3>
+        <p class="deal-desc" id="deal-desc">Complete luxury gel manicure, revitalizing peppermint pedicure &amp; complimentary silk press.</p>
+      </div>
+      <div class="deal-pricing">
+        <div class="deal-old" id="deal-old">KES 5,500</div>
+        <div class="deal-new" id="deal-new">KES 3,800</div>
+        <div class="deal-timer" id="deal-timer">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span id="deal-countdown">Offer ends in 08:42:15</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service / Product Catalog Grid -->
+  <section class="catalog" id="catalog-section">
+    <div class="section-header">
+      <div>
+        <h2>Featured Offerings &amp; Rates</h2>
+        <p class="section-subtitle">Transparent pricing -- book or ask questions directly</p>
+      </div>
+      <button class="btn-outline" id="catalog-view-all">
+        View All
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+    <div class="catalog-grid" id="catalog-grid">
+      <!-- Populated dynamically by app.js -->
+    </div>
+  </section>
+
+  <!-- Why AI / Conversion Problem Section -->
+  <section class="why-section" id="why-section">
+    <div class="why-header">
+      <span class="section-label">THE CONVERSION PROBLEM</span>
+      <h2>Why 64% of Customers Leave Before Buying</h2>
+      <p>When a prospect lands on an Instagram ad or Google Search, they want answers in seconds. If your team replies 2 hours later, they have already booked a competitor.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h4>The 2-Hour WhatsApp Delay</h4>
+        <p>Customers message at 9 PM or during busy rush hours. Human staff cannot reply instantly, causing 60% lead drop-off.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><path d="M7 8h2M7 11h2M13 8h4M13 11h4"/></svg>
+        </div>
+        <h4>24/7 Conversational AI</h4>
+        <p>Our intelligent assistant answers pricing questions, quotes packages, and captures names &amp; phone numbers in 2 seconds.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h4>Automatic Calendar &amp; Lead Push</h4>
+        <p>Confirmed appointments sync directly to Google Calendar, SMS, and WhatsApp alerts for your front desk.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image / Video Gallery Section (Big Square Style) -->
+  <section class="gallery" id="gallery-section">
+    <div class="section-header">
+      <div>
+        <h2 id="gallery-title">Our Work &amp; Atmosphere</h2>
+        <p class="section-subtitle">See what our clients experience</p>
+      </div>
+    </div>
+    <div class="gallery-grid" id="gallery-grid">
+      <!-- Populated dynamically by app.js -->
+    </div>
+  </section>
+
+  <!-- Testimonials Carousel -->
+  <section class="testimonials" id="testimonials-section">
+    <div class="section-header" style="justify-content:center;text-align:center;">
+      <div>
+        <span class="section-label">WHAT OUR CLIENTS SAY</span>
+        <h2>Trusted by Thousands Across Nairobi</h2>
+      </div>
+    </div>
+    <div class="testimonials-track" id="testimonials-track">
+      <!-- Populated dynamically by app.js -->
+    </div>
+    <div class="testimonials-nav">
+      <button class="testimonial-arrow" id="testimonial-prev" aria-label="Previous testimonial">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="testimonials-dots" id="testimonials-dots"></div>
+      <button class="testimonial-arrow" id="testimonial-next" aria-label="Next testimonial">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 6 15 12 9 18"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- Dual-Device 45-Second Interactive Showcase (Desktop + Mobile Simultaneous) -->
+  <section class="dual-showcase" id="dual-showcase-section">
+    <div class="section-header" style="text-align:center;justify-content:center;flex-direction:column;align-items:center;">
+      <span class="section-label">DUAL-DEVICE CLIENT SHOWCASE</span>
+      <h2>Simultaneous Desktop &amp; Mobile Experience</h2>
+      <p class="section-subtitle">Show clients their exact live experience on both phone and laptop in a 45-second interactive simulation</p>
+    </div>
+
+    <!-- 45-Second Walkthrough Progress Bar & Stepper -->
+    <div class="stepper-45s-bar">
+      <div class="stepper-header">
+        <div class="stepper-playback">
+          <button class="btn-stepper-play" id="btn-45s-toggle" aria-label="Play 45s Walkthrough">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" id="icon-45s-play"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            <span id="label-45s-timer">00:00 / 00:45</span>
+          </button>
+          <span class="stepper-mode-badge" id="stepper-step-title">Step 1: Instant QR Scan &amp; Mobile Load</span>
+        </div>
+        <div class="stepper-steps">
+          <span class="step-dot active" data-step="0">1. Instant Scan</span>
+          <span class="step-dot" data-step="1">2. Visual Menu</span>
+          <span class="step-dot" data-step="2">3. 2s AI Reply</span>
+          <span class="step-dot" data-step="3">4. Admin POS Ping</span>
+        </div>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="progress-fill-45s"></div>
+      </div>
+    </div>
+
+    <!-- Dual Device Frame Container -->
+    <div class="dual-device-container">
+      <!-- Desktop Mockup Frame -->
+      <div class="mockup-desktop">
+        <div class="mockup-desktop__bar">
+          <div class="browser-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="browser-url" id="mockup-desktop-url">https://kikaogrill.co.ke/menu</div>
+          <div class="browser-tag">Desktop View</div>
+        </div>
+        <div class="mockup-desktop__screen" id="mockup-desktop-screen">
+          <div class="mini-desktop-hero">
+            <div class="mini-hero-badge" id="mini-desktop-badge">SAME-DAY DIGITAL SETUP</div>
+            <h3 id="mini-desktop-title">Kikao Flame Grill &amp; Lounge</h3>
+            <p id="mini-desktop-desc">Smoked Ribs, Flame Steaks &amp; Instant QR Table Ordering</p>
+            <div class="mini-hero-ctas">
+              <span class="mini-btn-primary">Order from Table</span>
+              <span class="mini-btn-ghost">View Photos</span>
+            </div>
+            <div class="mini-catalog-preview" id="mini-desktop-catalog">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Smartphone Mockup Frame -->
+      <div class="mockup-mobile">
+        <div class="mockup-mobile__notch">
+          <div class="notch-speaker"></div>
+          <div class="notch-camera"></div>
+        </div>
+        <div class="mockup-mobile__screen" id="mockup-mobile-screen">
+          <div class="mobile-app-header">
+            <div class="mobile-app-logo" id="mini-mobile-logo">KF</div>
+            <div>
+              <strong id="mini-mobile-brand">Kikao Grill</strong>
+              <small id="mini-mobile-status">Table 04 | Active Session</small>
+            </div>
+          </div>
+          <div class="mobile-app-body">
+            <div class="mobile-promo-banner" id="mini-mobile-promo">
+              <span>Offer</span>
+              <strong id="mini-mobile-deal">BBQ Rack + 2 Draughts KES 2,450</strong>
+            </div>
+            <div class="mobile-items-list" id="mini-mobile-items">
+              <!-- Dynamically populated -->
+            </div>
+            <!-- Embedded Mini AI Chat Bubble -->
+            <div class="mobile-ai-chat-bubble" id="mini-mobile-chat">
+              <div class="mobile-ai-avatar">AI</div>
+              <div class="mobile-ai-text" id="mini-mobile-chat-text">
+                "Hello! Want to order our smoked ribs or check table availability?"
+              </div>
+            </div>
+          </div>
+          <div class="mobile-app-bottom-bar">
+            <span class="mobile-tab-btn active">Menu</span>
+            <span class="mobile-tab-btn">AI Chat</span>
+            <span class="mobile-tab-btn">M-Pesa Cart</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Admin & POS Dashboard Section -->
+  <section class="admin-dashboard-section" id="admin-dashboard-section">
+    <div class="section-header">
+      <div>
+        <span class="section-label">REAL-TIME BUSINESS OPERATIONS</span>
+        <h2>Live Admin &amp; POS Dashboard</h2>
+        <p class="section-subtitle">What managers &amp; staff see: live incoming orders, M-Pesa payments, and AI lead captures</p>
+      </div>
+      <div class="live-pulse-badge">
+        <span class="pulse-dot"></span>
+        <span>Live Operational Node</span>
+      </div>
+    </div>
+
+    <!-- Admin KPI Cards -->
+    <div class="admin-kpis-grid">
+      <div class="admin-kpi-card">
+        <small>Today's Verified Revenue</small>
+        <div class="kpi-val">KES 74,800</div>
+        <span class="kpi-tag kpi-tag--green">100% M-Pesa Reconciled</span>
+      </div>
+      <div class="admin-kpi-card">
+        <small>Active Table / Online Orders</small>
+        <div class="kpi-val">14 Orders</div>
+        <span class="kpi-tag kpi-tag--blue">Avg. Kitchen Ticket: 11 Min</span>
+      </div>
+      <div class="admin-kpi-card">
+        <small>24/7 AI Leads Captured</small>
+        <div class="kpi-val">38 Contacts</div>
+        <span class="kpi-tag kpi-tag--amber">&lt; 2s AI Reply Speed</span>
+      </div>
+      <div class="admin-kpi-card">
+        <small>Staff Waiter Call Reduction</small>
+        <div class="kpi-val">-72% Calls</div>
+        <span class="kpi-tag kpi-tag--green">Zero Missed Orders</span>
+      </div>
+    </div>
+
+    <!-- Live Orders & Kitchen Display Board -->
+    <div class="admin-console-grid">
+      <div class="admin-console-panel">
+        <div class="panel-header">
+          <strong>Live Kitchen &amp; Booking Stream</strong>
+          <span class="badge-pill badge-pill--green">Auto-Syncing</span>
+        </div>
+        <div class="ticket-stream" id="admin-ticket-stream">
+          <div class="kds-ticket kds-ticket--priority">
+            <div class="ticket-top">
+              <strong>Order #1042 - Table 4</strong>
+              <span class="ticket-time">2 min ago</span>
+            </div>
+            <p>1x Signature Hickory BBQ Ribs (Medium Spicy)<br>2x Passionfruit Craft Mojito Pitchers</p>
+            <div class="ticket-footer">
+              <span class="ticket-tag">Kitchen Prep</span>
+              <strong class="ticket-cost">KES 5,000 (M-Pesa Paid)</strong>
+            </div>
+          </div>
+          <div class="kds-ticket">
+            <div class="ticket-top">
+              <strong>Appointment - Grace W.</strong>
+              <span class="ticket-time">14 min ago</span>
+            </div>
+            <p>Boho Knotless Braids (Waist Length)<br>Branch: Westlands Sanctuary</p>
+            <div class="ticket-footer">
+              <span class="ticket-tag">Stylist Assigned: Mercy</span>
+              <strong class="ticket-cost">KES 4,500 (Deposit Confirmed)</strong>
+            </div>
+          </div>
+          <div class="kds-ticket">
+            <div class="ticket-top">
+              <strong>Property Viewing - Kevin M.</strong>
+              <span class="ticket-time">28 min ago</span>
+            </div>
+            <p>3-Bedroom Penthouse Tour, Kilimani<br>Contact: +254 722 849 102</p>
+            <div class="ticket-footer">
+              <span class="ticket-tag">Agent Push: Daniel</span>
+              <strong class="ticket-cost">WhatsApp Calendar Synced</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="admin-console-panel">
+        <div class="panel-header">
+          <strong>24/7 AI Leads CRM &amp; Conversation Log</strong>
+          <span class="badge-pill badge-pill--blue">Instant WhatsApp Sync</span>
+        </div>
+        <div class="crm-table-container">
+          <table class="pitch-table">
+            <thead>
+              <tr>
+                <th>Customer / Lead</th>
+                <th>Query / Intent</th>
+                <th>AI Response</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Sarah O.</strong><br><small>+254 712 304 991</small></td>
+                <td>Menu price for 8 people table</td>
+                <td>Sent package menu + reservation prompt</td>
+                <td><span class="badge-pill badge-pill--green">Booked</span></td>
+              </tr>
+              <tr>
+                <td><strong>Brian K.</strong><br><small>+254 720 443 189</small></td>
+                <td>Opening hours Sarit branch</td>
+                <td>Answered 11 AM - 2 AM &amp; directions</td>
+                <td><span class="badge-pill badge-pill--blue">Resolved</span></td>
+              </tr>
+              <tr>
+                <td><strong>Dr. Amina</strong><br><small>+254 733 912 004</small></td>
+                <td>Root canal cost inquiry</td>
+                <td>Provided pricing breakdown + slot picker</td>
+                <td><span class="badge-pill badge-pill--amber">Follow-Up</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CyTech Studios Direct Pitch Dispatcher -->
+  <section class="direct-pitch-section" id="direct-pitch-section">
+    <div class="section-header" style="text-align:center;justify-content:center;flex-direction:column;align-items:center;">
+      <span class="section-label">CYTECH STUDIOS PITCH ENGINE</span>
+      <h2>Send Direct Pitches to Any Business in 10 Seconds</h2>
+      <p class="section-subtitle">Enter business name, WhatsApp or Email, pick package, and dispatch directly from this project</p>
+    </div>
+
+    <div class="pitch-dispatcher-box">
+      <div class="dispatcher-form">
+        <div class="form-group">
+          <label for="pitch-biz-name">Target Business / Venue Name</label>
+          <input type="text" id="pitch-biz-name" placeholder="e.g. Artcaffe, The Alchemist, Sarit Dental, Fade Barbers" value="Kikao Lounge" />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="pitch-biz-contact">WhatsApp Phone or Email</label>
+            <input type="text" id="pitch-biz-contact" placeholder="e.g. +254 712 345 678 or owner@venue.co.ke" value="+254 711 500 600" />
+          </div>
+          <div class="form-group">
+            <label for="pitch-pkg-select">Service Package</label>
+            <select id="pitch-pkg-select">
+              <option value="qr-menu" selected>Starter QR Digital Menu (KES 30,000 | Deposit: KES 15,000)</option>
+              <option value="website-chatbot">Website + 24/7 AI Chatbot (KES 45,000 - 50,000+ | 50% Deposit)</option>
+              <option value="full-pos">Full Ordering Suite + POS + Kitchen Display (KES 95,000 | 60% Deposit)</option>
+              <option value="webapp">Custom Web App + Live Management Dashboard (KES 120,000 - 180,000+)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="pitch-personal-note">Personalized Business Detail (Instagram post, popular dish, reviews)</label>
+          <input type="text" id="pitch-personal-note" placeholder="e.g. Saw your weekend ribs platter on Instagram, loved the presentation!" value="Loved your woodfire barbecue reels on Instagram -- the food presentation is top-tier!" />
+        </div>
+
+        <div class="dispatcher-actions">
+          <button class="btn-dispatch-wa" id="btn-pitch-wa">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            <span>Send Direct via WhatsApp</span>
+          </button>
+          <button class="btn-dispatch-email" id="btn-pitch-email">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <span>Send Direct via Email</span>
+          </button>
+          <button class="btn-dispatch-copy" id="btn-pitch-copy">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <span>Copy Pitch</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="dispatcher-preview">
+        <div class="preview-header">
+          <strong>Live Generated Pitch Preview</strong>
+          <span class="preview-author-tag">Sender: Cy | CyTech Studios</span>
+        </div>
+        <pre class="preview-text-box" id="pitch-live-preview">Hi Kikao Lounge, this is Cy from CyTech Studios Nairobi. I came across your venue on Google Maps and your reviews are impressive, but I noticed guests can't view your menu or order online from their phone.
+
+Loved your woodfire barbecue reels on Instagram -- the food presentation is top-tier!
+
+We build instant QR table ordering for Kenyan restaurants and lounges: guests scan from their phone, view your photo menu, order directly to the kitchen/bar, and pay via M-Pesa. No waving hands at waiters on busy rush nights, zero order mistakes, and bigger average ticket sizes.
+
+Setup starts at KES 30,000 (KES 15,000 deposit), or KES 95,000 with live kitchen screen and staff dashboard.
+
+Here is our live 45-second demo: http://localhost:3005
+Can I set this up for you before this weekend's rush?
+
+Best regards,
+Cy | CyTech Studios Nairobi</pre>
+
+        <!-- Dispatched tracker status -->
+        <div class="dispatched-tracker" id="dispatched-tracker">
+          <small>Pitches Dispatched in Session: <strong id="session-pitch-count">0</strong></small>
+          <div class="dispatched-chips" id="dispatched-chips-container"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Branches / Locations -->
+  <section class="branches" id="branches-section">
+    <div class="section-header">
+      <div>
+        <h2>Our Branches &amp; Service Locations</h2>
+        <p class="section-subtitle">Visit our nearest location or book a direct slot</p>
+      </div>
+    </div>
+    <div class="branches-grid" id="branches-grid">
+      <!-- Populated dynamically by app.js -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer" id="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="brand-mark">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <span class="brand-name" id="footer-brand-name">Luxe Hair &amp; Wellness Spa</span>
+      </div>
+      <div class="footer-links">
+        <a href="#catalog-section">Services</a>
+        <a href="#branches-section">Locations</a>
+        <a href="#testimonials-section">Reviews</a>
+        <a href="#" id="footer-contact-link">Contact</a>
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram" class="social-link">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="#" aria-label="Facebook" class="social-link">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="#" aria-label="Twitter / X" class="social-link">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l11.7 16h4.3M4 20L20 4"/><path d="M20 4h-4.3M4 20h4.3"/></svg>
+        </a>
+        <a href="#" aria-label="WhatsApp" class="social-link">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        </a>
+      </div>
+      <p class="footer-copy">&copy; <span id="footer-year">2026</span> <span id="footer-copy-name">Luxe Hair &amp; Wellness Spa</span>. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Floating AI Chatbot Widget Button -->
+  <button class="chat-fab" id="chat-fab" aria-label="Open 24/7 AI Chatbot">
+    <span class="chat-fab__pulse"></span>
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    <span class="chat-fab__label" id="chat-fab-label">Chat with AI (2s Reply)</span>
+  </button>
+
+  <!-- Chatbot Window -->
+  <div class="chat-window" id="chat-window" role="dialog" aria-modal="true" aria-labelledby="chat-bot-title">
+    <div class="chat-header">
+      <div class="chat-header__info">
+        <div class="chat-avatar" id="chat-avatar">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <div>
+          <h4 id="chat-bot-title">Aria -- Luxe Spa Concierge</h4>
+          <small class="chat-status">
+            <span class="status-dot"></span>
+            Online -- Replies in &lt; 2s
+          </small>
+        </div>
+      </div>
+      <button class="chat-close" id="chat-close" aria-label="Close Chat">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="chat-body" id="chat-body">
+      <div class="chat-msg bot" id="chat-welcome">
+        Hello! Welcome to Luxe Hair &amp; Spa. I can answer price questions, check available slots, or book your stylist in seconds. How can I help you today?
+      </div>
+    </div>
+    <div class="chat-chips" id="chat-chips">
+      <!-- Populated dynamically by app.js -->
+    </div>
+    <div class="chat-input-bar">
+      <input type="text" id="chat-input" placeholder="Type a message or question..." aria-label="Chat input" />
+      <button class="chat-send" id="chat-send" aria-label="Send message">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Agency Guide Trigger -->
+  <button class="agency-trigger" id="agency-trigger">
+    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+    <span>Pitch &amp; Outreach Command Center</span>
+  </button>
+
+  <!-- Agency Guide & Pitch Modal -->
+  <div class="modal-overlay" id="agency-overlay"></div>
+  <div class="modal-panel modal-panel--wide" id="agency-modal" role="dialog" aria-modal="true">
+    <div class="modal-header">
+      <div>
+        <h4>Agency Outreach &amp; Pitch Command Center</h4>
+        <small>Copy-ready WhatsApp, Email, Pricing Calculator &amp; Execution Protocol</small>
+      </div>
+      <button class="modal-close" id="agency-modal-close" aria-label="Close">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <!-- Pitch Tabs -->
+    <div class="modal-tabs">
+      <button class="modal-tab active" data-tab="tab-scripts">1. Outreach Scripts</button>
+      <button class="modal-tab" data-tab="tab-pricing">2. Pricing &amp; Deposit Splits</button>
+      <button class="modal-tab" data-tab="tab-closing">3. Follow-Ups &amp; Closing</button>
+      <button class="modal-tab" data-tab="tab-action">4. Execution Checklist</button>
+    </div>
+
+    <div class="modal-body">
+      <!-- TAB 1: SCRIPTS -->
+      <div class="tab-pane active" id="tab-scripts">
+        <div class="script-card">
+          <div class="script-card__header">
+            <strong>1. Restaurants, Bars &amp; Lounges (WhatsApp)</strong>
+            <button class="btn-copy-script" data-target="script-restaurant">Copy Script</button>
+          </div>
+          <pre class="script-box" id="script-restaurant">Hi [Name], I'm [Your Name] from Nairobi. I came across [Venue] on Google Maps and the reviews are great, but I noticed customers can't see your menu online.
+
+I build QR table ordering: guests scan, order from their phone, and the order goes straight to your kitchen/POS. No waiting for waiters on a busy night, fewer mistakes, and bigger orders because guests see photos of everything.
+
+Here's a 45-second demo: [Link]
+I can have it live before this weekend's rush. Want me to send the price and set it up for you?</pre>
+          <div class="script-sub">
+            <span class="sub-label">If they reply "how much":</span>
+            <p>Setups start at <strong>KES 30,000</strong> for a QR menu, and <strong>KES 95,000</strong> with live ordering and staff dashboard. I only take a few installs a week so I can do them properly. Which fits your place better?</p>
+          </div>
+        </div>
+
+        <div class="script-card">
+          <div class="script-card__header">
+            <strong>2. Hotels &amp; Enterprise Dining (Email / LinkedIn)</strong>
+            <button class="btn-copy-script" data-target="script-hotel">Copy Script</button>
+          </div>
+          <pre class="script-box" id="script-hotel">Subject: Faster table service for [Venue], live in days
+
+Hello [Name],
+
+I build digital ordering systems for Kenyan hospitality: QR menus, table ordering, M-Pesa payments, and integration with POS systems like SambaPOS. Guests order from their phones, staff see orders in real time, and your management gets sales data.
+
+I'd like to show you a 5-minute walkthrough. Would a short visit this week work, or should I send a demo video first?
+
+Regards,
+[Your Name] | [Phone] | [Link]</pre>
+        </div>
+
+        <div class="script-card">
+          <div class="script-card__header">
+            <strong>3. Weekend &amp; Event Posters (Instant Cash Flow)</strong>
+            <button class="btn-copy-script" data-target="script-posters">Copy Script</button>
+          </div>
+          <pre class="script-box" id="script-posters">Hi [Name]! Hosting a weekend event or special offer night? I design event posters same-day: ready in 2 hours, edits included. KES 2,000, 50% upfront on M-Pesa and I start immediately. Want me to send mockups of the style?</pre>
+          <small class="script-hint">Post poster samples on your WhatsApp status and Instagram stories. Venues looking for promotion assets see them and direct message you.</small>
+        </div>
+
+        <div class="script-card">
+          <div class="script-card__header">
+            <strong>4. Service Businesses &amp; AI Chatbots (Salons, Clinics, Gyms, Real Estate)</strong>
+            <button class="btn-copy-script" data-target="script-ai-chatbot">Copy Script</button>
+          </div>
+          <pre class="script-box" id="script-ai-chatbot">Hi [Name], quick question: how many WhatsApp or Instagram messages do you get a day asking the same things (prices, availability, location)?
+
+I set up an AI assistant that answers those instantly, 24/7, books appointments, and hands serious leads to you. Takes about 3 days to set up. I can show you a demo on your own business info before you pay anything.
+
+Interested?</pre>
+          <div class="script-sub">
+            <span class="sub-label">Standard Pricing:</span>
+            <p>Website: <strong>KES 25,000 to 60,000</strong>. AI Chatbot: <strong>KES 30,000 to 80,000</strong> setup + <strong>KES 5,000 to 10,000/month</strong> recurring retainer.</p>
+          </div>
+        </div>
+
+        <div class="script-card">
+          <div class="script-card__header">
+            <strong>5. International Clients (LinkedIn, X, Upwork, Cold Email)</strong>
+            <button class="btn-copy-script" data-target="script-international">Copy Script</button>
+          </div>
+          <pre class="script-box" id="script-international">Hi [Name], I noticed [Business] doesn't have [a booking system / a site that converts / an instant chatbot], so you may be losing customers after hours.
+
+I'm a developer based in Nairobi. With my AI developer partner, we build high-converting websites, booking systems, and 24/7 AI chatbots for small businesses, fast and at a fraction of Western agency prices. Typical delivery is 3 to 7 days.
+
+Happy to send a quick mockup for [Business] at no cost so you can judge the quality. Interested?</pre>
+          <small class="script-hint">Pricing (USD): Website $400 to $1,200. Chatbot $500 to $1,500 + monthly maintenance fee.</small>
+        </div>
+      </div>
+
+      <!-- TAB 2: PRICING & SPLITS -->
+      <div class="tab-pane" id="tab-pricing">
+        <div class="pricing-matrix-container">
+          <table class="pitch-table">
+            <thead>
+              <tr>
+                <th>Package Tier</th>
+                <th>Client Price</th>
+                <th>Deposit Terms</th>
+                <th>Your 50% Take-Home</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Starter: QR Digital Menu</strong><br><small>Same-day setup, fast cash close</small></td>
+                <td>KES 30,000</td>
+                <td><span class="badge-pill badge-pill--green">100% Upfront</span> (KES 30,000)</td>
+                <td><strong class="highlight-cash">KES 15,000</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Standard: Menu + Ordering</strong><br><small>Live orders + staff dashboard</small></td>
+                <td>KES 95,000</td>
+                <td><span class="badge-pill badge-pill--blue">60% Deposit</span> (KES 57,000)</td>
+                <td><strong class="highlight-cash">KES 28,500</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Full Enterprise Suite</strong><br><small>POS integration + M-Pesa automated</small></td>
+                <td>KES 180,000 - 260,000</td>
+                <td><span class="badge-pill badge-pill--amber">50% Deposit</span> (KES 45k - 65k)</td>
+                <td><strong class="highlight-cash">KES 45,000 - 65,000</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Service Website + AI Chatbot</strong><br><small>Salons, clinics, gyms, real estate</small></td>
+                <td>KES 55,000 - 140,000</td>
+                <td>50% Deposit upfront</td>
+                <td><strong class="highlight-cash">KES 27,500 - 70,000</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Monthly AI &amp; Web Retainer</strong><br><small>Ongoing prompt tuning &amp; backups</small></td>
+                <td>KES 8,000 - 15,000 / mo</td>
+                <td>Monthly recurring</td>
+                <td><strong class="highlight-cash">KES 4,000 - 7,500 / mo</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- TAB 3: CLOSING & OBJECTIONS -->
+      <div class="tab-pane" id="tab-closing">
+        <div class="script-card">
+          <div class="script-card__header">
+            <strong>24-Hour Follow-Up (No Reply)</strong>
+            <button class="btn-copy-script" data-target="script-followup">Copy Script</button>
+          </div>
+          <pre class="script-box" id="script-followup">Hi [Name], just checking in. I have 2 setup slots left before the weekend. Should I reserve one for you?</pre>
+        </div>
+
+        <div class="script-card">
+          <div class="script-card__header">
+            <strong>Closing Script (When they say Yes)</strong>
+            <button class="btn-copy-script" data-target="script-lock-deposit">Copy Script</button>
+          </div>
+          <pre class="script-box" id="script-lock-deposit">Great! To lock your slot, please send the deposit of KES [Amount] to Till/Paybill [Number]. I start immediately and you only pay the balance when everything is live and working to your complete satisfaction. Sending my invoice now.</pre>
+        </div>
+
+        <div class="script-card">
+          <div class="script-card__header">
+            <strong>Overcoming "Too Expensive" Objection</strong>
+            <button class="btn-copy-script" data-target="script-downsell">Copy Script</button>
+          </div>
+          <pre class="script-box" id="script-downsell">I understand. If budget's the concern, I can start with the KES 30,000 QR menu and we upgrade to ordering later. Want that?</pre>
+        </div>
+      </div>
+
+      <!-- TAB 4: TONIGHT'S ACTION PLAN -->
+      <div class="tab-pane" id="tab-action">
+        <div class="action-checklist">
+          <div class="checklist-item">
+            <span class="checklist-num">1</span>
+            <div>
+              <strong>Record 45-Second Demo &amp; Review Offer Sheet</strong>
+              <p>Test the live demo on your phone or screen recorder showing QR menu and instant AI chat replies.</p>
+            </div>
+          </div>
+          <div class="checklist-item">
+            <span class="checklist-num">2</span>
+            <div>
+              <strong>Send 15 WhatsApp Messages to Local Restaurants &amp; Bars</strong>
+              <p>Find busy venues on Google Maps with missing or PDF-only menus. Personalize venue name and dish.</p>
+            </div>
+          </div>
+          <div class="checklist-item">
+            <span class="checklist-num">3</span>
+            <div>
+              <strong>Post Event Poster Samples &amp; Message 5 Venues</strong>
+              <p>KES 2,000 same-day poster offer for weekend events. Fast cash via M-Pesa to validate momentum.</p>
+            </div>
+          </div>
+          <div class="checklist-item">
+            <span class="checklist-num">4</span>
+            <div>
+              <strong>Send 5 AI Chatbot Pitches + 3 International Pitches</strong>
+              <p>Target salons, clinics, dentists, and overseas businesses that take hours to reply to customer DMs.</p>
+            </div>
+          </div>
+          <div class="checklist-item">
+            <span class="checklist-num">5</span>
+            <div>
+              <strong>Tomorrow Morning Follow-Up &amp; Laptop Walk-Ins</strong>
+              <p>Follow up on all messages sent tonight, then walk into 5 venues with your live laptop/phone demo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "business-growth-sites",
+  "version": "1.0.0",
+  "description": "High-Converting Marketing Websites + AI Chatbots for Salons, Clinics, Real Estate, Gyms, Schools & Car Dealerships",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
